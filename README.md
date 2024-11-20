@@ -36,10 +36,11 @@ If seats are not available for the user on the specific date, the app handles th
 
 - Packages
 - Object-Oriented Programming
-  - Classes & Objects
-  - Interface
+  - Classes / Interfaces
+  - Objects
   - Abstraction
   - Inheritance
+  - Polymorphism
 - Exception Handling
 - Collection Frameworks
 
