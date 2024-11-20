@@ -1,4 +1,4 @@
-###### BUS RESERVATION SYSTEM - BOOKBUS 🚌🚌🚌
+# BUS RESERVATION SYSTEM - BOOKBUS 🚌🚌🚌
 
 A Java-based prototype for booking bus reservations efficiently.
 
@@ -8,7 +8,7 @@ This application allows users to book, manage bus tickets. Designed as a prototy
 
 ## Working
 
-# Assumption
+### Assumption
 
    There are totally 3 buses with associated drivers and associated routes.
    There are only starting departure and destination, no in between stops.
@@ -76,20 +76,8 @@ If seats are not available for the user on the specific date, the app handles th
    - Exit.
 
 ## Project Structure
+![image](https://github.com/user-attachments/assets/91c4db1f-1ac4-422d-9119-a7105d473fdc)
 
-├── bin # Compiled bytecode files (.class)
-│ ├── com.bookbus.busreserve
-│ │ ├── Main.class
-│ │ ├── model
-│ │ ├── services
-│ │ ├── utilities
-├── src # Source code (.java)
-│ ├── com.bookbus.busreserve
-│ │ ├── Main.java # Entry point
-│ │ ├── model # Data models (Bus, Passengers, BookedDetails, BusDrivers.)
-│ │ ├── services # Service layer for logic (Booking, Ticket.)
-│ │ ├── utilities # Helper classes and utilities
-├── README.md
 
 ## Files and Functionality
 
@@ -157,3 +145,15 @@ If seats are not available for the user on the specific date, the app handles th
 - Implementation of ADMIN dashboard for viewing of details👀.
 - Building up a simple console UI for visualizing seats in the buses😍.
 - Handling each and every possible exceptions (date inconsistency, input mismatch, ...)🦾.
+
+## Glimpses of the application 😍😍😍
+
+![Bus selection](https://github.com/user-attachments/assets/ca3c2d11-668a-4e35-8c27-f197739e362c)
+
+![Booking confirmation](https://github.com/user-attachments/assets/5eceeedd-8d8a-463c-a498-ea8955e69e3e)
+
+![Bus ticket](https://github.com/user-attachments/assets/f9528275-82a0-47bf-94b1-c39e35362584)
+
+![Available buses](https://github.com/user-attachments/assets/879adc7f-dc0c-4460-bd0e-b6bc19e7b0c1)
+
+![Exit application](https://github.com/user-attachments/assets/a2fbdbb5-13c1-4ece-8c84-07188774c2a0)
