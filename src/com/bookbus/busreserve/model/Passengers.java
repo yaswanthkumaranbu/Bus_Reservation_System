@@ -1,18 +1,12 @@
 package com.bookbus.busreserve.model;
-import java.util.*;
 
 public class Passengers {
-	private String passengerName;
+
+    private String passengerName;
     private int passengerAge;
     private long passengerPhone;
-    
-    private ArrayList<Passengers> passengerList = new ArrayList<>();
 
-    public ArrayList<Passengers> getPassengerList() {
-		return passengerList;
-	}
-
-	public Passengers(String passengerName, int passengerAge, long passengerPhone) {
+    public Passengers(String passengerName, int passengerAge, long passengerPhone) {
         this.passengerName = passengerName;
         this.passengerAge = passengerAge;
         this.passengerPhone = passengerPhone;

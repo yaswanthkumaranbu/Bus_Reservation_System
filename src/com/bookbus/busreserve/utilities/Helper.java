@@ -1,84 +1,58 @@
 package com.bookbus.busreserve.utilities;
 
-import java.util.*;
-
 import com.bookbus.busreserve.model.*;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
-import com.bookbus.busreserve.model.*;
-
-import com.bookbus.busreserve.services.*;
-
 
 public class Helper {
-	
-	private Bus buses;
-	private Passengers passengers;
-	
-	
-	public Bus getBuses() {
-		return buses;
-	}
 
-	public void setBuses(Bus buses) {
-		this.buses = buses;
-	}
+    private Bus buses;
+    private Passengers passengers;
+    public String dateString;
 
-	public Passengers getPassengers() {
-		return passengers;
-	}
+    Scanner sc = new Scanner(System.in);
 
-	public void setPassengers(Passengers passengers) {
-		this.passengers = passengers;
-	}
+    public Helper() {
 
-	public String getDateString() {
-		return dateString;
-	}
+    }
 
-	public void setDateString(String dateString) {
-		this.dateString = dateString;
-	}
+    public Helper(Bus buses, Passengers passengers, String dateString) {
+        this.buses = buses;
+        this.passengers = passengers;
+        this.dateString = dateString;
+    }
 
-	public String dateString;
-	
-	Scanner sc = new Scanner(System.in);
-		
-	public Helper(Bus buses, Passengers passengers, String dateString) {
-		this.buses = buses;
-		this.passengers = passengers;
-		this.dateString = dateString;
-	}
-	
-	public Helper() {
-		
-	}
+    public Bus getBuses() {
+        return buses;
+    }
 
-	public Passengers getPassengersDetails() {
-		String passengerName;
-	    int passengerAge;
-	    long passengerPhone;
-		System.out.print("Enter your name:");
-		
-		passengerName = sc.nextLine();
-		
-		System.out.print("Enter your age:");
-		
+    public void setBuses(Bus buses) {
+        this.buses = buses;
+    }
 
-		passengerAge = sc.nextInt();
-		System.out.print("Enter your phone number:");
-		
-		passengerPhone = sc.nextLong();
+    public Passengers getPassengers() {
+        return passengers;
+    }
 
-		
-		return new Passengers(passengerName, passengerAge, passengerPhone);
-	}
-	
-	
-	
-	
-	
-	
+    public void setPassengers(Passengers passengers) {
+        this.passengers = passengers;
+    }
+
+    public Passengers getPassengersDetails() {      // Gets details from the Passengers
+        String passengerName;
+        int passengerAge;
+        long passengerPhone;
+        System.out.print("Enter your name:");
+
+        passengerName = sc.nextLine();
+
+        System.out.print("Enter your age:");
+
+        passengerAge = sc.nextInt();
+        System.out.print("Enter your phone number:");
+
+        passengerPhone = sc.nextLong();
+
+        return new Passengers(passengerName, passengerAge, passengerPhone);
+    }
+
 }
