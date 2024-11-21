@@ -23,27 +23,41 @@ public class Ticket implements IBusTicket {
         System.out.println("\t\t\tBUS TICKET");
 
         System.out.println("\nBUS DETAILS\n");
+        
+        System.out.println("Departure Date:"+helper.dateString+"\n");
 
-        System.out.println("Bus name:" + helper.getBuses().getName());
-        System.out.println("Bus name:" + helper.getBuses().getBusNo());
-        System.out.println("Bus name:" + (helper.getBuses().isAC() ? "AC" : "NON-AC"));
-        System.out.println("Bus name:" + helper.getBuses().getType());
-        System.out.println("Bus name:" + helper.getBuses().getColor());
-        System.out.println("Bus name:" + helper.getBuses().getDestination());
-        System.out.println("Bus name:" + helper.getBuses().getStart());
-        System.out.println("Cost(INR) : " + helper.getBuses().getCost());
+        System.out.println(String.format(
+        	    "%-15s: %s%n%-15s: %s%n%-15s: %s%n%-15s: %s%n%-15s: %s%n%-15s: %s%n%-15s: %s%n%-15s: %s",
+        	    "Bus Name", helper.getBuses().getName(),
+        	    "Bus Number", helper.getBuses().getBusNo(),
+        	    "Conditioning", helper.getBuses().isAC() ? "AC" : "NON-AC",
+        	    "Bus Type", helper.getBuses().getType(),
+        	    "Bus Color", helper.getBuses().getColor(),
+        	    "Destination", helper.getBuses().getDestination(),
+        	    "Departure", helper.getBuses().getStart(),
+        	    "Cost (INR)", helper.getBuses().getCost()
+        	));
+
 
         System.out.println("\nBUS DRIVER DETAILS\n");
 
-        System.out.println("Bus name:" + busDriver.getDriverName());
-        System.out.println("Bus name:" + busDriver.getDriverAge());
-        System.out.println("Bus name:" + busDriver.getDriverPhone());
+        System.out.println(String.format(
+        	    "%-15s: %s%n%-15s: %s%n%-15s: %s",
+        	    "Driver Name", busDriver.getDriverName(),
+        	    "Driver Age", busDriver.getDriverAge(),
+        	    "Driver Phone", busDriver.getDriverPhone()
+        	));
+
 
         System.out.println("\nYOUR DETAILS\n");
 
-        System.out.println("Name:" + passenger.getPassengerName());
-        System.out.println("Name:" + passenger.getPassengerAge());
-        System.out.println("Name:" + passenger.getPassengerPhone());
+        System.out.println(String.format(
+        	    "%-15s: %s%n%-15s: %s%n%-15s: %s",
+        	    "Passenger Name", passenger.getPassengerName(),
+        	    "Passenger Age", passenger.getPassengerAge(),
+        	    "Passenger Phone", passenger.getPassengerPhone()
+        	));
+
 
         System.out.println("\n\t\t🥰🥰🥰 Happy Journey 🥰🥰🥰");
 

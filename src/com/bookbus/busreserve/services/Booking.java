@@ -1,29 +1,36 @@
 package com.bookbus.busreserve.services;
 
 import com.bookbus.busreserve.iservices.*;
+
+
 import com.bookbus.busreserve.model.*;
 import com.bookbus.busreserve.utilities.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.*;
+
+import java.time.LocalTime;
+
 
 public class Booking implements IBusReservationServices {
 
     public Booking() {
 
     }
-    private SimpleDateFormat date;
 
     Bus busChosenByUser;
     private int busCount = 0;
 
     Scanner sc = new Scanner(System.in);
+    
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // Define input format
+
+
 
     final private static ArrayList<Helper> booked = new ArrayList<>();		// Stores the booked details
 
-    public SimpleDateFormat getDate() {
-        return date;
-    }
+   
 
     public Bus getBusChosenByUser() {
         return busChosenByUser;
@@ -48,20 +55,44 @@ public class Booking implements IBusReservationServices {
     public boolean flag = true;
 
     @Override
-    public boolean is_available(Bus busChosenByUser) {		// Checks the availablility of the seats for specified date and bus
+    public boolean is_available(Bus busChosenByUser) {		// Checks the availability of the seats for specified date and bus
         this.busChosenByUser = busChosenByUser;
         String dateString;
         while (true) {
-            System.out.print("\nEnter the Date of boarding (dd-MM-yyyy):");
+            System.out.print("\nEnter the Date of boarding (yyyy-MM-dd):");
             dateString = sc.next();
             try {
-                date = new SimpleDateFormat("dd-MM-yyyy");
-                date.setLenient(false);
-                date.parse(dateString);
-                break;
+                // Parse the input date
+                LocalDate userDate = LocalDate.parse(dateString, formatter);
 
-            } catch (ParseException ex) {
-                System.out.println("Try again! (Invalid date)");
+                // Get the current date
+                LocalDate currentDate = LocalDate.now();
+
+                // Compare the dates
+                if (userDate.isBefore(currentDate)) {
+                    System.out.println("The entered date is in the past.");
+                    continue;
+                } else if (userDate.isEqual(currentDate)) {
+                 
+                    LocalTime currentTime = LocalTime.now();
+                    LocalTime fourPM = LocalTime.of(16, 0); // 4 PM
+
+                 if (currentTime.isAfter(fourPM)) {
+                        System.out.println("The current time is after 4 PM. Please try different date");
+                    }
+                 
+                 else
+                 {
+                	 break;
+                 }
+                }
+                 else {
+                	 break;
+                 }
+                
+             
+            } catch (DateTimeParseException e) {
+                System.out.println("Invalid date format. Please use 'yyyy-MM-dd'.");
             }
         }
         int count = 0;
@@ -92,11 +123,16 @@ public class Booking implements IBusReservationServices {
     @Override
     public int show(ArrayList<Bus> buses) {
         for (Bus bus : buses) {
-            System.out.println("\n--------------------------------------------------\n");
-            System.out.println("Bus name : " + bus.getName());
-            System.out.println("Bus starts from : " + bus.getStart());
-            System.out.println("Departure at : " + bus.getDestination());
-            System.out.println("Cost(INR) : " + bus.getCost());
+        	System.out.println("\n--------------------------------------------------\n");
+        	System.out.println(String.format(
+        	    "%-20s: %s%n%-20s: %s%n%-20s: %s%n%-20s: %s",
+        	    "Bus Name", bus.getName(),
+        	    "Bus Starts From", bus.getStart(),
+        	    "Departure At", bus.getDestination(),
+        	    "Cost (INR)", bus.getCost()
+        	));
+        	System.out.println("--------------------------------------------------");
+
         }
         int userOpt = 1;
 
