@@ -17,7 +17,7 @@ public class Main {
         busDrivers.add(new BusDrivers("Driver2", 25, 9080675768l));
         busDrivers.add(new BusDrivers("Driver3", 25, 9077384521l));
 
-        buses.add(new Bus("Dolphin", "TN 37 A 9797", 2000, true, "Sleeper", 1, "Blue", "Banglore (Reaches at 11pm)", "Coimbatore (Starts at 4pm)", busDrivers.get(0)));
+        buses.add(new Bus("Dolphin", "TN 37 A 9797", 2000, true, "Sleeper", 65, "Blue", "Banglore (Reaches at 11pm)", "Coimbatore (Starts at 4pm)", busDrivers.get(0)));
         buses.add(new Bus("Hopper", "TN 37 U 8656", 3000, true, "Sleeper", 65, "Green", "Hydrabad (Reaches at 12pam)", "Coimbatore (Starts at 4pm)", busDrivers.get(1)));
         buses.add(new Bus("Ant", "TN 37 E 6785", 25000, true, "Sleeper", 65, "Red", "Madurai (Reaches at 11:30pm)", "Coimbatore (Starts at 4pm)", busDrivers.get(2)));
 

@@ -10,13 +10,13 @@ This application allows users to book, manage bus tickets. Designed as a prototy
 
 # Assumption
 
-   There are totally 3 buses with associated drivers and associated routes.
-   There are only starting departure and destination, no in between stops.
-   All the 3 buses follows a certain timing regularly for each and every day in a month.
+There are totally 3 buses with associated drivers and associated routes.
+There are only starting departure and destination, no in between stops.
+All the 3 buses follows a certain timing regularly for each and every day in a month.
 
-   Passengers can reserve a seat but **no** particular seat as like the modern apps does.
-   Passengers can only pay hand cash.
-   Passengers can snip the ticket for reference right after successful booking.
+Passengers can reserve a seat but **no** particular seat as like the modern apps does.
+Passengers can only pay hand cash.
+Passengers can snip the ticket for reference right after successful booking.
 
 This application prompts user for selecting the route bus.
 
