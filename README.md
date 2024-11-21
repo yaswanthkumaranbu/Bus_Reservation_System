@@ -148,12 +148,24 @@ If seats are not available for the user on the specific date, the app handles th
 
 ## Glimpses of the application 😍😍😍
 
-![Bus selection](https://github.com/user-attachments/assets/ca3c2d11-668a-4e35-8c27-f197739e362c)
+**Selection of Buses**
 
-![Booking confirmation](https://github.com/user-attachments/assets/5eceeedd-8d8a-463c-a498-ea8955e69e3e)
+![Bus selection](https://github.com/user-attachments/assets/5e7348ee-c3ab-41f2-b390-92ceeac3aa68)
 
-![Bus ticket](https://github.com/user-attachments/assets/f9528275-82a0-47bf-94b1-c39e35362584)
+**Booking Confirmation**
 
-![Available buses](https://github.com/user-attachments/assets/879adc7f-dc0c-4460-bd0e-b6bc19e7b0c1)
+![Booking confirmation](https://github.com/user-attachments/assets/c47ef915-1bf7-4c15-9787-f380cd30ab0f)
 
-![Exit application](https://github.com/user-attachments/assets/a2fbdbb5-13c1-4ece-8c84-07188774c2a0)
+**Bus Ticket Generation**
+
+![Bus ticket](https://github.com/user-attachments/assets/4278ee4d-b977-4515-a47c-e2fad6bb4456)
+
+**Displaying Available Buses**
+
+![Available buses](https://github.com/user-attachments/assets/a3ac8b9c-7a35-47cc-af0d-e743b41353cd)
+
+**Exit From the Application**
+
+![Exit application](https://github.com/user-attachments/assets/9bd47a76-e124-4ae8-80b9-a408c80ed9cc)
+
+**THANK YOU FOR THE VISIT !!!**
